@@ -1,0 +1,20 @@
+we can create a new website which will feature individual pages linked from an index.html, to allow the viewing of many pages featuring:
+a title
+a description
+a prompt example (highlighted as a code snippet
+two side by side images, before on the left, after on the right
+
+the main index page will feature cards which link to each page.
+We will be showcasing prompts for the new ai image generation model "Flux Kontext" which allows image editing with image and prompt inputs alone.
+
+We will first extract each prompt example in the two files:
+@/cheatsheet1.md 
+@/cheatsheet2.md 
+
+which list many examples of image editing scenarios, with a description and prompt example. The images will be added externally. We will number each prompt and use this as the filename for the images, with are stored in the /images/ subfolder. for example: where XX is the ID for the prompt scenario, idXXa.png = before, idXXb.png = after. we can use placeholder 1024x1024px images in solid grey until we handoff this project to the art team.
+
+We will create the docuement "promptID.md" which will list all the extracted prompts and assign the idXX number, which is also used for the dedicated page for this prompt scenario, eg id01.html, id02.html and so on until all prompts have pages.
+
+All pages will use the same HTML + Tailwind CSS & CDN as separate HTML files. The Index is the main entry point for the website, where a simple list of prompts is used to link to the other pages, styled into cards. The separate pages are laid out as already explained, generate the title, summarize a description, quote the Prompt exactly, then use two placeholder images.
+
+We can write a document "ArtTeamHandoff.md" as the handoff document for the art team, including dimension, filenames and ID to allow the full graphics to be recreated and replacing the placeholder art.
