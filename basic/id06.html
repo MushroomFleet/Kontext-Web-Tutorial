@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Background Person - FLUX Kontext Prompt Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0f172a',
+                        'dark-surface': '#1e293b',
+                        'dark-border': '#334155',
+                        'accent-blue': '#3b82f6',
+                        'accent-purple': '#8b5cf6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .code-block {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-slate-100 min-h-screen">
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="bg-dark-surface border-b border-dark-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="../index.html" class="text-accent-blue hover:text-accent-purple transition-colors">Home</a>
+                <span class="text-slate-500">></span>
+                <a href="../index.html#basic" class="text-accent-blue hover:text-accent-purple transition-colors">Basic</a>
+                <span class="text-slate-500">></span>
+                <span class="text-slate-300">Remove Background Person</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        
+        <!-- Header Section -->
+        <header class="mb-12">
+            <div class="flex items-center mb-6">
+                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium mr-4">Basic</span>
+                <span class="text-accent-blue font-mono text-lg">#06</span>
+            </div>
+            <h1 class="text-4xl font-bold gradient-text mb-4">Remove Background Person</h1>
+            <p class="text-slate-300 text-xl max-w-3xl">
+                Master the fundamentals of object removal with intelligent background reconstruction. 
+                This technique demonstrates FLUX Kontext's ability to cleanly remove unwanted elements 
+                while seamlessly filling the space with contextually appropriate background details.
+            </p>
+        </header>
+
+        <!-- Description Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-6">Technique Overview</h2>
+            <div class="bg-dark-surface border border-dark-border rounded-xl p-8">
+                <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                    Object removal is one of the most practical and frequently needed image editing techniques. 
+                    FLUX Kontext excels at removing unwanted background elements while maintaining the 
+                    integrity and natural appearance of the scene through:
+                </p>
+                <ul class="text-slate-300 space-y-3 mb-6">
+                    <li class="flex items-start">
+                        <span class="text-accent-blue mr-3 mt-1">•</span>
+                        <span><strong class="text-white">Smart object detection</strong> - Accurate identification of the target person and their boundaries</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent-blue mr-3 mt-1">•</span>
+                        <span><strong class="text-white">Contextual inpainting</strong> - Intelligent filling of the removed area using surrounding visual context</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent-blue mr-3 mt-1">•</span>
+                        <span><strong class="text-white">Seamless blending</strong> - Natural edge integration that leaves no trace of the removal</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent-blue mr-3 mt-1">•</span>
+                        <span><strong class="text-white">Texture continuity</strong> - Consistent background patterns, textures, and lighting across the filled area</span>
+                    </li>
+                </ul>
+                <p class="text-slate-300 text-lg">
+                    This technique is essential for cleaning up photos, creating cleaner compositions, 
+                    removing photobombers, and preparing images for professional use where background 
+                    distractions need to be eliminated.
+                </p>
+            </div>
+        </section>
+
+        <!-- Prompt Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-6">FLUX Kontext Prompt</h2>
+            <div class="code-block">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-slate-400 text-sm">Object Removal</span>
+                    <button onclick="navigator.clipboard.writeText(this.parentElement.nextElementSibling.textContent)" 
+                            class="text-accent-blue hover:text-accent-purple text-sm px-3 py-1 rounded bg-slate-700 hover:bg-slate-600 transition-colors">
+                        Copy
+                    </button>
+                </div>
+                <code class="text-green-400 text-lg block">Remove the person in the background</code>
+            </div>
+            <div class="mt-6 bg-slate-800/50 rounded-lg p-6">
+                <h3 class="text-white font-semibold mb-3">Why This Prompt Works</h3>
+                <p class="text-slate-300">
+                    This prompt is effective because it clearly specifies the action ("Remove") and precisely 
+                    identifies the target ("the person in the background"). The location specification "in the background" 
+                    helps FLUX Kontext distinguish between multiple people who might be present, ensuring only the 
+                    unwanted background figure is removed while preserving main subjects and foreground elements.
+                </p>
+            </div>
+        </section>
+
+        <!-- Before/After Images -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-6">Before & After Comparison</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Before Image -->
+                <div class="bg-dark-surface border border-dark-border rounded-xl overflow-hidden">
+                    <div class="bg-slate-700 px-6 py-3 border-b border-dark-border">
+                        <h3 class="text-white font-semibold">Before</h3>
+                        <p class="text-slate-400 text-sm">Scene with unwanted background person</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="aspect-square bg-slate-600 rounded-lg flex items-center justify-center">
+                            <img src="../images/id06a.png" alt="Before: Scene with unwanted person in background" 
+                                 class="w-full h-full object-cover rounded-lg" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="text-center" style="display: none;">
+                                <div class="text-slate-400 text-lg mb-2">📷</div>
+                                <div class="text-slate-300 font-medium">Before Image</div>
+                                <div class="text-slate-400 text-sm">id06a.png</div>
+                                <div class="text-slate-500 text-xs mt-2">1024x1024px</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- After Image -->
+                <div class="bg-dark-surface border border-dark-border rounded-xl overflow-hidden">
+                    <div class="bg-slate-700 px-6 py-3 border-b border-dark-border">
+                        <h3 class="text-white font-semibold">After</h3>
+                        <p class="text-slate-400 text-sm">Clean scene with person seamlessly removed</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="aspect-square bg-slate-600 rounded-lg flex items-center justify-center">
+                            <img src="../images/id06b.png" alt="After: Clean scene with background person removed" 
+                                 class="w-full h-full object-cover rounded-lg" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="text-center" style="display: none;">
+                                <div class="text-slate-400 text-lg mb-2">🎨</div>
+                                <div class="text-slate-300 font-medium">After Image</div>
+                                <div class="text-slate-400 text-sm">id06b.png</div>
+                                <div class="text-slate-500 text-xs mt-2">1024x1024px</div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="border-t border-dark-border pt-12">
+            <div class="flex justify-between items-center">
+                <div>
+                    <span class="text-slate-500 text-sm">Previous in Basic</span>
+                    <div>
+                        <a href="id05.html" class="text-accent-blue hover:text-accent-purple transition-colors">← #05 - Add Sunglasses</a>
+                    </div>
+                </div>
+                
+                <a href="../index.html" class="bg-accent-blue hover:bg-accent-purple text-white px-6 py-3 rounded-lg transition-colors font-medium">
+                    View All Prompts
+                </a>
+                
+                <div class="text-right">
+                    <span class="text-slate-500 text-sm">Next in Basic</span>
+                    <div>
+                        <a href="id07.html" class="text-accent-blue hover:text-accent-purple transition-colors">#07 - Text Sign Replacement →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-surface border-t border-dark-border mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <p class="text-slate-400">
+                    FLUX Kontext Prompt Showcase • Demonstrating precision image editing techniques
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

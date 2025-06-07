@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLUX Kontext Prompt Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0f172a',
+                        'dark-surface': '#1e293b',
+                        'dark-border': '#334155',
+                        'accent-blue': '#3b82f6',
+                        'accent-purple': '#8b5cf6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            transition: all 0.3s ease;
+        }
+        .difficulty-badge {
+            background: linear-gradient(135deg, var(--tw-gradient-stops));
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-slate-100 min-h-screen">
+    
+    <!-- Header -->
+    <header class="bg-dark-surface border-b border-dark-border">
+        <div class="container mx-auto px-6 py-8">
+            <h1 class="text-4xl font-bold gradient-text mb-4">FLUX Kontext Prompt Showcase</h1>
+            <p class="text-slate-300 text-lg max-w-3xl">
+                Discover the power of instruction-based image editing with FLUX Kontext. These curated prompts demonstrate 
+                precise editing techniques that go beyond traditional AI image generation, allowing you to make targeted 
+                changes while preserving what matters most in your images.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        
+        <!-- Basic Level Section -->
+        <section class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="difficulty-badge from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold mr-4">
+                    BASIC
+                </div>
+                <h2 class="text-3xl font-bold text-white">Fundamental Techniques</h2>
+            </div>
+            <p class="text-slate-300 mb-8 text-lg">
+                Start here to learn the core principles of FLUX Kontext. These prompts cover simple object modifications, 
+                basic additions and removals, and straightforward style changes.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Basic Prompt Cards -->
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='basic/id01.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#01</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Basic</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Car Color Change</h3>
+                    <p class="text-slate-400 text-sm mb-4">Simple color modification while preserving reflections and background</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='basic/id02.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#02</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Basic</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Sky to Sunset</h3>
+                    <p class="text-slate-400 text-sm mb-4">Simple background atmospheric change</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='basic/id03.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#03</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Basic</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Wall Material Change</h3>
+                    <p class="text-slate-400 text-sm mb-4">Simple building material transformation</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='basic/id04.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#04</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Basic</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Black and White Conversion</h3>
+                    <p class="text-slate-400 text-sm mb-4">Simple color-to-monochrome style change</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='basic/id05.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#05</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Basic</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Add Sunglasses</h3>
+                    <p class="text-slate-400 text-sm mb-4">Simple accessory addition to a person</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='basic/id06.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#06</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Basic</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Remove Background Person</h3>
+                    <p class="text-slate-400 text-sm mb-4">Simple background element removal</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='basic/id07.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#07</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Basic</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Text Sign Replacement</h3>
+                    <p class="text-slate-400 text-sm mb-4">Simple text replacement on signage</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='basic/id08.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#08</span>
+                        <span class="bg-green-500/20 text-green-400 px-2 py-1 rounded text-xs">Basic</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Car Swap</h3>
+                    <p class="text-slate-400 text-sm mb-4">Simple vehicle replacement maintaining scene context</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intermediate Level Section -->
+        <section class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="difficulty-badge from-yellow-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold mr-4">
+                    INTERMEDIATE
+                </div>
+                <h2 class="text-3xl font-bold text-white">Professional Applications</h2>
+            </div>
+            <p class="text-slate-300 mb-8 text-lg">
+                Build on your skills with more complex scenarios. These prompts cover character consistency, 
+                professional workflows, and advanced object manipulation techniques.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Intermediate Prompt Cards -->
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id09.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#09</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Watermark Removal</h3>
+                    <p class="text-slate-400 text-sm mb-4">Advanced removal of repeating watermarks from complex scenes</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id10.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#10</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">E-commerce Lifestyle Shot</h3>
+                    <p class="text-slate-400 text-sm mb-4">Transform studio product shot into lifestyle context</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id11.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#11</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Ad Creative Localization</h3>
+                    <p class="text-slate-400 text-sm mb-4">Localize advertisement for different regions and languages</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id12.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#12</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Character Consistency - Futuristic City</h3>
+                    <p class="text-slate-400 text-sm mb-4">Maintain character identity across different environments</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id13.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#13</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Elf Warrior Scene Transfer</h3>
+                    <p class="text-slate-400 text-sm mb-4">Fantasy character environment change with identity preservation</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id14.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#14</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Costume Change with Identity</h3>
+                    <p class="text-slate-400 text-sm mb-4">Complete outfit transformation while preserving character identity</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id15.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#15</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Robot in Zen Garden</h3>
+                    <p class="text-slate-400 text-sm mb-4">Placing technological character in contrasting peaceful environment</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id16.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#16</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Product Color Variation</h3>
+                    <p class="text-slate-400 text-sm mb-4">Generate product color variants for catalogs</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id27.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#27</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Mascot Character Placement</h3>
+                    <p class="text-slate-400 text-sm mb-4">Consistent brand mascot placement across storytelling contexts</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='intermediate/id28.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#28</span>
+                        <span class="bg-yellow-500/20 text-yellow-400 px-2 py-1 rounded text-xs">Intermediate</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Gothic Text Addition</h3>
+                    <p class="text-slate-400 text-sm mb-4">Add stylized text with specific font and visual characteristics</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Level Section -->
+        <section class="mb-16">
+            <div class="flex items-center mb-8">
+                <div class="difficulty-badge from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold mr-4">
+                    ADVANCED
+                </div>
+                <h2 class="text-3xl font-bold text-white">Master-Level Techniques</h2>
+            </div>
+            <p class="text-slate-300 mb-8 text-lg">
+                Push the boundaries of what's possible. These prompts showcase advanced style transfers, 
+                complex scene transformations, and professional-grade workflow optimizations.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Advanced Prompt Cards -->
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id17.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#17</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Van Gogh Style Transfer</h3>
+                    <p class="text-slate-400 text-sm mb-4">Transform realistic scene into specific artistic style</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id18.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#18</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Pop Art Conversion</h3>
+                    <p class="text-slate-400 text-sm mb-4">Convert photograph to pop art with specific characteristics</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id19.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#19</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Architectural Blueprint Style</h3>
+                    <p class="text-slate-400 text-sm mb-4">Transform illustration to technical drawing style</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id20.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#20</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Bioluminescent Forest Transform</h3>
+                    <p class="text-slate-400 text-sm mb-4">Convert natural scene to magical fantasy environment</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id21.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#21</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Comic Book Ink Style</h3>
+                    <p class="text-slate-400 text-sm mb-4">Convert photograph to detailed comic book illustration style</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id22.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#22</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Wizard Underwater Scene</h3>
+                    <p class="text-slate-400 text-sm mb-4">Place character in surreal environment while maintaining identity</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id23.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#23</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Interior Design Iteration</h3>
+                    <p class="text-slate-400 text-sm mb-4">Advanced architectural visualization with multiple material changes</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id24.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#24</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Advanced Text Styling</h3>
+                    <p class="text-slate-400 text-sm mb-4">Text replacement with complex styling preservation</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id25.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#25</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Scene Evolution - Mountain Transfer</h3>
+                    <p class="text-slate-400 text-sm mb-4">Complete environment transformation with precise character preservation</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id26.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#26</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Universal Object Removal Template</h3>
+                    <p class="text-slate-400 text-sm mb-4">Flexible template for removing any specified unwanted object from scenes</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id29.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#29</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Event Poster Text with Effects</h3>
+                    <p class="text-slate-400 text-sm mb-4">Text replacement while preserving complex visual effects</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6 card-hover cursor-pointer" onclick="window.location.href='advanced/id30.html'">
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-accent-blue font-mono text-sm">#30</span>
+                        <span class="bg-red-500/20 text-red-400 px-2 py-1 rounded text-xs">Advanced</span>
+                    </div>
+                    <h3 class="text-white font-semibold mb-2">Iterative Scene Addition</h3>
+                    <p class="text-slate-400 text-sm mb-4">Adding elements to previously modified scenes while maintaining consistency</p>
+                    <div class="text-accent-blue text-sm font-medium">View Example →</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-surface border-t border-dark-border mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <p class="text-slate-400">
+                    FLUX Kontext Prompt Showcase • Demonstrating precision image editing techniques
+                </p>
+                <p class="text-slate-500 text-sm mt-2">
+                    30 carefully curated prompts across Basic, Intermediate, and Advanced difficulty levels
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
