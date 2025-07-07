@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realistic to Anime - FLUX Kontext Prompt Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#0f172a',
+                        'dark-surface': '#1e293b',
+                        'dark-border': '#334155',
+                        'accent-blue': '#3b82f6',
+                        'accent-purple': '#8b5cf6'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .code-block {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="bg-dark-bg text-slate-100 min-h-screen">
+    
+    <!-- Breadcrumb Navigation -->
+    <nav class="bg-dark-surface border-b border-dark-border">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="../index.html" class="text-accent-blue hover:text-accent-purple transition-colors">Home</a>
+                <span class="text-slate-500">></span>
+                <a href="../index.html#basic" class="text-accent-blue hover:text-accent-purple transition-colors">Basic</a>
+                <span class="text-slate-500">></span>
+                <span class="text-slate-300">Realistic to Anime</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        
+        <!-- Header Section -->
+        <header class="mb-12">
+            <div class="flex items-center mb-6">
+                <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium mr-4">Basic</span>
+                <span class="text-accent-blue font-mono text-lg">#34</span>
+            </div>
+            <h1 class="text-4xl font-bold gradient-text mb-4">Realistic to Anime</h1>
+            <p class="text-slate-300 text-xl max-w-3xl">
+                Transform realistic photographs into anime-style artwork while maintaining recognizable features and composition. 
+                Perfect for character design, social media content, and artistic interpretation projects that blend 
+                photorealism with Japanese animation aesthetics.
+            </p>
+        </header>
+
+        <!-- Description Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-6">Technique Overview</h2>
+            <div class="bg-dark-surface border border-dark-border rounded-xl p-8">
+                <p class="text-slate-300 text-lg leading-relaxed mb-6">
+                    Realistic to anime style conversion is one of the most popular artistic transformations, combining the 
+                    detail and composition of photography with the stylized aesthetics of Japanese animation. FLUX Kontext 
+                    excels at this transformation by understanding both photographic elements and anime artistic conventions:
+                </p>
+                <ul class="text-slate-300 space-y-3 mb-6">
+                    <li class="flex items-start">
+                        <span class="text-accent-blue mr-3 mt-1">•</span>
+                        <span><strong class="text-white">Facial Feature Stylization</strong> - Converts realistic faces to anime proportions and characteristics</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent-blue mr-3 mt-1">•</span>
+                        <span><strong class="text-white">Color Palette Transformation</strong> - Applies vibrant, saturated colors typical of anime artwork</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent-blue mr-3 mt-1">•</span>
+                        <span><strong class="text-white">Art Style Application</strong> - Maintains composition while applying anime drawing techniques</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-accent-blue mr-3 mt-1">•</span>
+                        <span><strong class="text-white">Character Recognition</strong> - Preserves identity and recognizability throughout the transformation</span>
+                    </li>
+                </ul>
+                <p class="text-slate-300 text-lg">
+                    This technique is ideal for content creators, artists, character designers, and anyone looking to 
+                    create unique artistic interpretations of real-world subjects.
+                </p>
+            </div>
+        </section>
+
+        <!-- Prompt Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-6">FLUX Kontext Prompt</h2>
+            <div class="code-block">
+                <div class="flex items-center justify-between mb-4">
+                    <span class="text-slate-400 text-sm">Style Transformation</span>
+                    <button onclick="navigator.clipboard.writeText(this.parentElement.nextElementSibling.textContent)" 
+                            class="text-accent-blue hover:text-accent-purple text-sm px-3 py-1 rounded bg-slate-700 hover:bg-slate-600 transition-colors">
+                        Copy
+                    </button>
+                </div>
+                <code class="text-green-400 text-lg block">anime style</code>
+            </div>
+            <div class="mt-6 bg-slate-800/50 rounded-lg p-6">
+                <h3 class="text-white font-semibold mb-3">Why This Simple Prompt Works</h3>
+                <p class="text-slate-300 mb-4">
+                    The beauty of this prompt lies in its simplicity and effectiveness. "Anime style" is a comprehensive 
+                    instruction that FLUX Kontext interprets as a complete artistic transformation, automatically applying 
+                    all the characteristic elements of anime artwork without requiring detailed specifications.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-green-500/10 border border-green-500/20 rounded-lg p-4">
+                        <h4 class="text-green-400 font-medium mb-2">Comprehensive Transformation</h4>
+                        <p class="text-slate-300 text-sm">
+                            This single phrase triggers a complete style overhaul including facial features, colors, and artistic technique
+                        </p>
+                    </div>
+                    <div class="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
+                        <h4 class="text-purple-400 font-medium mb-2">Artistic Intelligence</h4>
+                        <p class="text-slate-300 text-sm">
+                            FLUX Kontext understands anime conventions and applies them naturally while preserving subject identity
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Before/After Images -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-6">Before & After Comparison</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Before Image -->
+                <div class="bg-dark-surface border border-dark-border rounded-xl overflow-hidden">
+                    <div class="bg-slate-700 px-6 py-3 border-b border-dark-border">
+                        <h3 class="text-white font-semibold">Before</h3>
+                        <p class="text-slate-400 text-sm">Realistic photograph with natural lighting and features</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="aspect-square bg-slate-600 rounded-lg flex items-center justify-center">
+                            <img src="../images/id34a.png" alt="Before: Realistic photograph" 
+                                 class="w-full h-full object-cover rounded-lg" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="text-center" style="display: none;">
+                                <div class="text-slate-400 text-lg mb-2">📷</div>
+                                <div class="text-slate-300 font-medium">Before Image</div>
+                                <div class="text-slate-400 text-sm">id34a.png</div>
+                                <div class="text-slate-500 text-xs mt-2">1024x1024px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- After Image -->
+                <div class="bg-dark-surface border border-dark-border rounded-xl overflow-hidden">
+                    <div class="bg-slate-700 px-6 py-3 border-b border-dark-border">
+                        <h3 class="text-white font-semibold">After</h3>
+                        <p class="text-slate-400 text-sm">Anime-style artwork with stylized features and vibrant colors</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="aspect-square bg-slate-600 rounded-lg flex items-center justify-center">
+                            <img src="../images/id34b.png" alt="After: Anime-style transformation" 
+                                 class="w-full h-full object-cover rounded-lg" 
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="text-center" style="display: none;">
+                                <div class="text-slate-400 text-lg mb-2">🎨</div>
+                                <div class="text-slate-300 font-medium">After Image</div>
+                                <div class="text-slate-400 text-sm">id34b.png</div>
+                                <div class="text-slate-500 text-xs mt-2">1024x1024px</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transformation Analysis -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-6">Anime Style Elements Applied</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-4">
+                    <h3 class="text-pink-400 font-semibold mb-2">Facial Features</h3>
+                    <ul class="text-slate-300 text-sm space-y-1">
+                        <li>• Larger, more expressive eyes</li>
+                        <li>• Refined facial proportions</li>
+                        <li>• Smooth skin rendering</li>
+                        <li>• Stylized nose and mouth</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-4">
+                    <h3 class="text-blue-400 font-semibold mb-2">Color Palette</h3>
+                    <ul class="text-slate-300 text-sm space-y-1">
+                        <li>• Vibrant, saturated colors</li>
+                        <li>• Cel-shading effects</li>
+                        <li>• Enhanced contrast</li>
+                        <li>• Anime-typical hues</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-4">
+                    <h3 class="text-green-400 font-semibold mb-2">Art Technique</h3>
+                    <ul class="text-slate-300 text-sm space-y-1">
+                        <li>• Clean line work</li>
+                        <li>• Simplified shading</li>
+                        <li>• Stylized textures</li>
+                        <li>• Flat color areas</li>
+                    </ul>
+                </div>
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-4">
+                    <h3 class="text-purple-400 font-semibold mb-2">Character Design</h3>
+                    <ul class="text-slate-300 text-sm space-y-1">
+                        <li>• Recognizable identity</li>
+                        <li>• Anime proportions</li>
+                        <li>• Expressive qualities</li>
+                        <li>• Dynamic appearance</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-semibold text-white mb-6">Creative Applications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6">
+                    <h3 class="text-white font-semibold mb-3">Social Media Content</h3>
+                    <p class="text-slate-300 text-sm">
+                        Create eye-catching anime versions of yourself or others for profile pictures, posts, and creative content.
+                    </p>
+                </div>
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6">
+                    <h3 class="text-white font-semibold mb-3">Character Design</h3>
+                    <p class="text-slate-300 text-sm">
+                        Transform real people into anime characters for storytelling, game design, or artistic projects.
+                    </p>
+                </div>
+                <div class="bg-dark-surface border border-dark-border rounded-xl p-6">
+                    <h3 class="text-white font-semibold mb-3">Artistic Interpretation</h3>
+                    <p class="text-slate-300 text-sm">
+                        Explore creative possibilities by reimagining photographs in the distinctive anime art style.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="border-t border-dark-border pt-12">
+            <div class="flex justify-between items-center">
+                <div>
+                    <span class="text-slate-500 text-sm">Previous in Basic</span>
+                    <div>
+                        <a href="id33.html" class="text-accent-blue hover:text-accent-purple transition-colors">← #33 - Color & Exposure Correction</a>
+                    </div>
+                </div>
+                
+                <a href="../index.html" class="bg-accent-blue hover:bg-accent-purple text-white px-6 py-3 rounded-lg transition-colors font-medium">
+                    View All Prompts
+                </a>
+                
+                <div class="text-right">
+                    <span class="text-slate-500 text-sm">Next in Basic</span>
+                    <div>
+                        <a href="id35.html" class="text-accent-blue hover:text-accent-purple transition-colors">#35 - Physical Changes →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-surface border-t border-dark-border mt-16">
+        <div class="container mx-auto px-6 py-8">
+            <div class="text-center">
+                <p class="text-slate-400">
+                    FLUX Kontext Prompt Showcase • Demonstrating precision image editing techniques
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
